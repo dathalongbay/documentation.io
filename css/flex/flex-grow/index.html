@@ -24,7 +24,7 @@
 
     <meta name="theme-color" content="#563d7c">
 
-    <style>
+    <style type="text/css">
         main {
             font-size: 24px;
             text-transform: uppercase;
@@ -40,7 +40,6 @@
             background-color: DodgerBlue;
             color: white;
             width: 100px;
-            /*margin: 10px;*/
             text-align: center;
             line-height: 75px;
             font-size: 18px;
@@ -190,6 +189,34 @@
             <h3>Ví dụ flex-grow: 3 ( giãn ra 3 đơn vị )</h3>
 
             <h1>Flex grow mặc định flex-grow = 0</h1>
+
+            <h1>Code CSS</h1>
+
+            <figure class="highlight">
+            <pre>
+                <code class="language-css">
+                    main {
+                        font-size: 24px;
+                        text-transform: uppercase;
+                    }
+                    .flex-container {
+                        display: flex;
+                        align-items: stretch;
+                        background-color: #f1f1f1;
+                        width: 600px;
+                    }
+
+                    .flex-container > div {
+                        background-color: DodgerBlue;
+                        color: white;
+                        width: 100px;
+                        text-align: center;
+                        line-height: 75px;
+                        font-size: 18px;
+                        min-height: 200px;
+                    }
+            </code></pre>
+            </figure>
 
             <div class="flex-container">
                 <div style="flex-grow: 0">cột 1 flex-grow: 0</div>
