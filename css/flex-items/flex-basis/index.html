@@ -55,45 +55,7 @@
 
 <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
 
-    <div class="navbar-nav-scroll">
-        <ul class="navbar-nav bd-navbar-nav flex-row">
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/">Trang chủ</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/html/">HTML</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/css/">CSS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/js/">JS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/jquery/">JQUERY</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/php/">PHP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/phpoop/">PHP OOP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/mysql/">MYSQL</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/mvc/">MVC</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/laravel/">LARAVEL</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/lamp/lamp-la-gi.html">LAMP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="https://dathalongbay.github.io/documentation.io/webdevelopment/">Web Development</a>
-            </li>
-        </ul>
+    <div class="navbar-nav-scroll" data-include="https://dathalongbay.github.io/documentation.io/navigation.html">
     </div>
 </header>
 
@@ -331,6 +293,15 @@
 
 <script src="main_assets/prism.js"></script>
 <script src="https://dathalongbay.github.io/documentation.io/main_assets/prism.js"></script>
-
+<script>
+    $(function(){
+        var includes = $('[data-include]');
+        jQuery.each(includes, function(){
+            var file = $(this).data('include');
+            var html = $(this).load(file).toString();
+            $(this).html(html);
+        });
+    });
+</script>
 </body>
 </html>
